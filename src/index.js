@@ -10,19 +10,19 @@ function getButtonText(){
 
 
 const App = () => {
-    const buttonText = 'Click Me';
+    const buttonText = {text: 'click Me'};
+    const labelText = 'Enter name: '
     return (
         <div>
-            <label className="label" for="name"> Enter name: </label>
+            <label className="label" htmlFor="name"> {labelText} </label>
             <input id="name" type="text"/>
-            <button style={{ backgroundColor: 'blue', color: 'white' }}>{getButtonText()}</button>
+            <button style={{ backgroundColor: 'blue', color: 'white' }}>{buttonText.text}</button>
 
 </div>
     )};
 
 // take the react component and show on screen.
 
-ReactDOM.render( <
-    App / > ,
+ReactDOM.render( <App /> ,
     document.querySelector('#root')
 )
